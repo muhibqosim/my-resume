@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QosimTech::contact</title>
+  <link rel='shortcut icon' href='img/favicon.ico'>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar  navbar-dark bg-primary text-white fixed-top">
+      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse"> <span
+          class="navbar-toggle-icon fas fa-bars text-white dropdown"> Nav </span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto text-danger">
+          <li class="nav-item"> <a class="nav-link text-white" href="index.html">Home </a></li>
+          <li class="nav-item"> <a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"> <a class="nav-link text-white" href="resume.html">Resume </a></li>
+          <li class="nav-item"> <a class="nav-link text-white" href="works.html"> Works </a></li>
+          <li class="nav-item"> <a class="nav-link text-white" href="contact.html"> Contact </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="text-center px-2  mb-1 pt-3">
+    <p class="h3"> Connect <span class="text-primary"> via: </span></p>
+
+    <i class="fas fa-blender-phone text-primary h1 mt-5"> </i>
+    <p class="text-secondary h6"> <span class="h5 text-dark"> Tel: </span> <br> <Tel> +2348137074761 </Tel></p>
+    <i class="fas fa-map-marker text-primary h1 mt-5"> </i>
+    <p class="text-secondary h6"> <span class="text-dark h5"> Locate @ </span> <br> 1b, G.R.A. road, Sabo, Sagamu, Ogun
+      state, Nigeria. <br>
+      Or <br>
+      MSSN admin 1, Bayero University, Kabuga, Kano, Nigeria. </p>
+
+    <i class="fas fa-mail-bulk text-primary h1 mt-5"> </i>
+    <p class="text-secondary h6"> <span class="text-dark h5"> Email @</span> <br>
+      <a href="https://mail.google.com/mail/u/muhibqosim@gmail.com" class=""> muhibqosim@gmail.com</a> </p>
+
+    <p class="mt-3 h4"> <span class="h1 text-danger"> OR </span><br> <br>
+      <i class="fab fa-whatsapp text-success h1 mt-5"> </i>
+      Quick <span class="text-primary"> WhatsApp </span>
+    </p>
+    <!-- form -->
+    <form action="https://wa.me/2349037074761" class="pt-3 px-4" id="api">
+      <div>
+        <input type="number" name="" id="phone" placeholder="Phone Number" value=""
+          class="text-center form-control r-lg badge-pill bg-light" />
+        <input type="message" name="message" id="message" placeholder="your message here" value=""
+          class="text-center form-control mt-3 r-lg badge-pill bg-light" />
+      </div>
+      <div class="text-center mt-3">
+        <input type="submit" id="submit" value="Send Message" action="https://wa.me/2349037074761"
+          class="text-center bg-danger badge-pill text-white mt-3 btn-lg" />
+      </div>
+    </form>
+  </div>
+
+  <footer class="mt-5  mx-1 text-center">
+    <p>Copyright &copy; 2020| Designed by QosimTech | All Rights Reserved.</p>
+  </footer>
+  <!-- WhatsApp -->
+    <script>
+        let api = $('#api');
+        let phone = $('#phone');
+        let message = $('#message');
+       // let copy = $('#copy');
+        //let link = $('#link');
+
+        api.submit(function (e) { 
+            e.preventDefault();
+
+            // collect Inputs
+            let phoneInput = phone.val();
+            let messageInput = encodeURI(message.val());
+
+            // Generate Whatsapp Link
+            let outputLink = `https://wa.me/${phoneInput}?text=${messageInput}`;
+
+            link.attr('href', outputLink);
+            link.html(outputLink);
+            copy.val(outputLink);
+         })
+         </script>
+         
+  <script src="js/jquery.slim.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/bootstrap.js">
+  </script>
+  
+  
+</body>
+
+</html>
